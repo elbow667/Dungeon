@@ -1,0 +1,45 @@
+[gd_scene load_steps=8 format=3 uid="uid://dq1kgdoogcnde"]
+
+[ext_resource type="Texture2D" uid="uid://b46x7twa45bkh" path="res://Art/priest1_v1/priest1_v1_1.png" id="1_mf5ql"]
+[ext_resource type="Script" path="res://Art/priest1_v1/priest_1_v_1.gd" id="1_uwj7g"]
+[ext_resource type="Texture2D" uid="uid://bbk08pfk63ck3" path="res://Art/priest1_v1/priest1_v1_2.png" id="2_vrswv"]
+[ext_resource type="Texture2D" uid="uid://csjvtagiq072q" path="res://Art/priest1_v1/priest1_v1_3.png" id="3_75b1a"]
+[ext_resource type="Texture2D" uid="uid://coxpabl87cuwo" path="res://Art/priest1_v1/priest1_v1_4.png" id="4_nt21n"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_pttxw"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_mf5ql")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_vrswv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_75b1a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_nt21n")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_13rxd"]
+size = Vector2(11, 12)
+
+[node name="priest1_v1" type="CharacterBody2D"]
+collision_mask = 3
+script = ExtResource("1_uwj7g")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_pttxw")
+animation = &"idle"
+autoplay = "idle"
+frame = 1
+frame_progress = 0.794362
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1.5, 0)
+shape = SubResource("RectangleShape2D_13rxd")
