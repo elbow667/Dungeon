@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://rytp3o6jcdis"]
+[gd_scene load_steps=8 format=3 uid="uid://rytp3o6jcdis"]
 
 [ext_resource type="Texture2D" uid="uid://cwuyn6eukew4a" path="res://Art/Dungeon_Tileset.png" id="1_vhgsh"]
 [ext_resource type="PackedScene" uid="uid://dq1kgdoogcnde" path="res://Art/priest1_v1/priest_1_v_1.tscn" id="2_g7q2l"]
 [ext_resource type="PackedScene" uid="uid://33r7gdomxunl" path="res://silver_key.tscn" id="4_sfumm"]
 [ext_resource type="PackedScene" uid="uid://ddj1xlwtndngn" path="res://double_door.tscn" id="4_sh3m5"]
+[ext_resource type="PackedScene" uid="uid://ddqn5hovfhs58" path="res://Art/skeleton1_v2/skeleton.tscn" id="5_qq3wh"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_nm473"]
 texture = ExtResource("1_vhgsh")
@@ -356,3 +357,6 @@ position = Vector2(368, 56)
 
 [node name="SilverKey" parent="." instance=ExtResource("4_sfumm")]
 position = Vector2(156.5, 72.5)
+
+[node name="skeleton" parent="." instance=ExtResource("5_qq3wh")]
+position = Vector2(414.25, -85.5)
